@@ -85,6 +85,7 @@
 
 -- Remove repeating characters
 	local function no_repeat(string)
+			print(gsub(string, "([%S])%S*%1", "%1")) -- removes all repeating
 			print(gsub(string, "([%S])%S+%1", "%1")) -- only doubles are left, eg: `hello`
 	end
 	no_repeat("1 22 333 4444 55555 666666 7777777 888888888 999999999")
